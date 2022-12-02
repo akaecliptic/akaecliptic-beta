@@ -1,0 +1,78 @@
+@use "vars";
+@use "util";
+
+#settings {
+    width: 300px;
+    max-height: 250px;
+
+    padding: 10px;
+
+    z-index: 50;
+    box-sizing: border-box;
+    position: absolute;
+    
+    right: 0;
+    
+
+    background-color: rgba(black, .75);
+
+    border: solid 2px white;
+    border-right: none;
+
+    @include util.text-highlight;
+
+    // RE_SPONSIVE 
+    @media screen and ( min-width: vars.$medium ) {
+        bottom: 50%;
+
+        transform: translateY(50%);
+    }
+
+    @media screen and ( max-width: vars.$medium ) {
+        top: 10%;
+    }
+}
+
+#settings-head {
+    display: flex;
+
+    * {
+        margin: 0;
+    }
+
+    h2 {
+        margin-right: auto;
+    }
+
+    img {
+        width: 45px;
+        height: 45px;
+
+        filter: invert(100%);
+
+        @include util.button-behahviour;
+    }
+}
+
+#settings-body {
+    padding: 10px;
+
+    text-align: center;
+
+    img {
+        width: 600px;
+    }
+}
+
+// Options
+
+.settings-option {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    span {
+        margin-right: auto;
+    }
+}

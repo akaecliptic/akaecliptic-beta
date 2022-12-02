@@ -1,0 +1,15 @@
+@use "vars";
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: vars.$colour-background;
+    color: vars.$colour-text;
+    font-family: vars.$font-bold;
+
+    overflow: hidden;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKA-ECLIPTIC</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.svg">
+</head>
+<body style="background-color: black;">
+    <script src="styles.bundle.js"></script>
+    <section>
+
+        <nav id="ctnr-btns">
+            <h2 id="btn-code">CODE</h2>
+            <h2 id="btn-settings">SETTINGS</h2>
+        </nav>
+
+        <aside id="accents">
+            <div id="head">
+                <div id="logo">
+                    <img src="assets/images/logo.svg" alt="website logo">
+                </div>
+                <hr id="top">
+            </div>
+            <hr id="side">
+        </aside>
+
+        <article class="ctnr-content hidden" id="left">
+			<div class="content">
+			</div>
+		</article>
+        
+		<article class="ctnr-content hidden" id="right">
+			<div class="content">
+			</div>
+		</article>
+
+        <span class="close hidden" id="btn-close">
+            <img src="assets/images/close.svg" alt="close"> CLOSE
+        </span>
+
+    </section>
+
+    <div id="popup" class="hidden">
+        <div id="popup-head">
+            <h2 id="popup-title">Popup</h2>
+            <img id="popup-close" src="assets/images/close.svg" alt="close">
+        </div>
+        <div id="popup-body">
+            
+        </div>
+    </div>
+    
+    <div class="hidden" id="settings">
+        <div id="settings-head">
+            <h2 id="settings-title">Settings</h2>
+            <img id="settings-close" src="assets/images/close.svg" alt="close">
+        </div>
+        <div id="settings-body">
+            <div class="settings-option">
+                <span>Planet Names</span>
+                <select id="settings-names" name="topic">
+                    <option value="0">Topic</option>
+                    <option value="1">Local</option>
+                    <option value="2">None</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.bundle.js"></script>
+</body>
+</html>

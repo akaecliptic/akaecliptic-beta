@@ -1,0 +1,107 @@
+@use "vars";
+@use "util";
+
+#popup {
+    width: 55vw;
+    height: 55vh;
+
+    padding: 10px;
+
+    z-index: 50;
+    position: absolute;
+
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+    background-color: rgba(black, .75);
+
+    border: 2px dashed vars.$colour-background-light;
+
+    @include util.text-highlight;
+
+    // RE_SPONSIVE 
+    @media screen and ( min-width: vars.$medium ) {
+        min-width: 650px;
+        min-height: 550px;
+    }
+
+    @media screen and ( max-width: vars.$medium ) {
+        width: 90vw;
+        height: 90vh;
+
+        border: 4px dashed vars.$colour-background-light;
+
+        background-color: black;
+    }
+}
+
+#popup-head {
+    display: flex;
+
+    * {
+        margin: 0;
+    }
+
+    h2 {
+        margin-right: auto;
+    }
+
+    img {
+        width: 45px;
+        height: 45px;
+
+        filter: invert(100%);
+
+        @include util.button-behahviour;
+    }
+}
+
+#popup-body {
+    padding: 10px;
+
+    text-align: center;
+
+    p {
+        margin: 10px;
+    }
+
+    img {
+        width: 100%;
+        // RE_SPONSIVE 
+        @media screen and ( min-width: vars.$medium ) {
+            width: 600px;
+        }
+    }
+}
+
+// Form
+
+#contact-me {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+
+    * {
+        margin: 5px 0;
+        padding: 0 5px;
+
+        box-sizing: border-box;
+
+        font-size: .9em;
+        font-weight: bold;
+        font-family: vars.$font-code;
+    }
+
+    input, select {
+        height: 30px;
+    }
+    
+    textarea {
+        height: 250px;
+
+        resize: none;
+        padding: 5px;
+    }
+}

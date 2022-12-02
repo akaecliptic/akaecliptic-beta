@@ -1,0 +1,12 @@
+@mixin button-behahviour {
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+@mixin text-highlight {
+    ::selection {
+        color: black;
+        background-color: white;
+    }
+}
